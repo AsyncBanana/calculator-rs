@@ -4,6 +4,7 @@ A lightweight rust calculation parser. Only supports basic syntax, eg. no parent
 The current operators that are supported are
  
 | Character used | Function |
+| -------------- | :--------- |
 | `+` | Add to number |
 | `-` | Subtract from number |
 | `*` | Multiply number |
