@@ -1,5 +1,11 @@
 [package]
-name = "calculator"
+name = "calculator-parser"
+description = "A simple calculation parser for user input"
+keywords = ["calculator","parser","math"]
+categories = ["mathematics","parsing"]
+homepage = "https://github.com/AsyncBanana/calculator-rs/tree/master/calculator"
+license = "MIT"
+readme = "README.md"
 version = "1.0.0"
 authors = ["AsyncBanana <jacobedwardjackson@outlook.com>"]
 edition = "2018"

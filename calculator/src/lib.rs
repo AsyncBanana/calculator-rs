@@ -73,7 +73,6 @@ fn process_pass(result_array: &Vec<Token>, operations: OperationVector) -> Vec<T
     }
     return new_array;
 }
-mod calculator {}
 // Resolve a string of calculations to the resulting number
 pub fn calculate(to_calculate: &str) -> Result<f64,CalculationError> {
     let mut result_array: Vec<Token> = Vec::new();
