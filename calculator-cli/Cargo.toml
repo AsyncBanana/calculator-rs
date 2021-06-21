@@ -1,0 +1,21 @@
+[package]
+name = "calculator-cli"
+description = "A calculator CLI for calculator-parser"
+keywords = ["calculator","math","cli"]
+categories = ["mathematics","command-line-utilities"]
+homepage = "https://github.com/AsyncBanana/calculator-rs/tree/master/calculator-cli"
+license = "MIT"
+readme = "README.md"
+version = "1.0.0"
+authors = ["AsyncBanana <jacobedwardjackson@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+lto = "thin"
+panic = "abort"
+
+[dependencies]
+clap="2.33.0"
+colored = "2"
+calculator-parser="1.0.1"
