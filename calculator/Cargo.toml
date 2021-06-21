@@ -6,10 +6,13 @@ categories = ["mathematics","parsing"]
 homepage = "https://github.com/AsyncBanana/calculator-rs/tree/master/calculator"
 license = "MIT"
 readme = "README.md"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["AsyncBanana <jacobedwardjackson@outlook.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+lto = "thin"
+panic = "abort"
 
 [dependencies]

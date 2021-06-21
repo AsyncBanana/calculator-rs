@@ -1,4 +1,3 @@
-use std::fmt;
 enum Operator {
     Add,
     Multiply,
@@ -17,21 +16,12 @@ struct OperationVector {
     multiply: Option<fn(&Vec<Token>, &mut usize, &mut Vec<Token>)>,
     exponent: Option<fn(&Vec<Token>, &mut usize, &mut Vec<Token>)>,
 }
+
+#[derive(Debug)]
 pub struct CalculationError {
     message: String
 }
-impl fmt::Display for CalculationError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "Error with calculator: {}. Please Try Again!", self.message) // user-facing output
-    }
-}
 
-// Implement std::fmt::Debug for AppError
-impl fmt::Debug for CalculationError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{{ file: {}, line: {}, message: {} }}", file!(), line!(), self.message) // programmer-facing output
-    }
-}
 fn process_pass(result_array: &Vec<Token>, operations: OperationVector) -> Vec<Token> {
     let mut index: usize = 0;
     let mut new_array: Vec<Token> = Vec::new();

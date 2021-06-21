@@ -1,2 +1,2 @@
 [workspace]
-members=["calculator"]
+members=["calculator","calculator-cli"]
